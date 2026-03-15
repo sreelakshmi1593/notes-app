@@ -3,7 +3,7 @@ import NoteForm from "./components/NoteForm";
 import NoteList from "./components/NoteList";
 import SearchBar from "./components/SearchBar";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://notes-app-0svv.onrender.com";
 
 function App() {
   const [notes, setNotes]           = useState([]);
