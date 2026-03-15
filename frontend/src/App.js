@@ -21,7 +21,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`${API_URL}/notes`);
+      const res = await fetch(`${API_URL}/api/notes`);
       if (!res.ok) throw new Error("Failed to fetch notes");
       const data = await res.json();
       setNotes(data);
@@ -35,7 +35,7 @@ function App() {
   // ── Create a new note ─────────────────────────────────────────────────────
   const handleCreate = async (title, content) => {
     try {
-      const res = await fetch(`${API_URL}/notes`, {
+      const res = await fetch(`${API_URL}/api/notes`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, content }),

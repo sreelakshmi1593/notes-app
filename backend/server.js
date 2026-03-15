@@ -6,7 +6,7 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({origin: "https://notes-app-mocha-two.vercel.app"}));
+app.use(cors());
 app.use(express.json());
 
 const db = new Database(path.join(__dirname, "notes.db"));
